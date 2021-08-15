@@ -41,7 +41,8 @@
   "search-bar":{
     "props":{
       "width": "grow",
-      "blockClass":"search-bar"
+      "blockClass":"searchBar",
+      "maxWidth":"100%"
     }
   },
 

@@ -3,10 +3,55 @@
     "blocks": [
       "tab-layout",
       "slider-layout#text-test",
+      "flex-layout.row",
+      "flex-layout.row#1",
       "rich-text"
       
     ]
   },
+
+  "flex-layout.row#1":{
+    "children": ["flex-layout.col#2"]
+  },
+
+  "flex-layout.col#2": {
+    "children": ["image#3"]
+  },
+
+  "flex-layout.row": {
+    "children": ["flex-layout.col#1", "flex-layout.col"]
+  },
+  "flex-layout.col": {
+    "children": ["image#1", "image#2"]
+  },
+  "flex-layout.col#1": {
+    "children": ["image#3", "image#4"]
+  },
+  "image#3": {
+    "props": {
+      "src": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/1618423425-POST.png",
+      "maxWidth": "100%"
+    }
+  },
+  "image#4": {
+    "props": {
+      "src": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/1614455592-POST.png",
+      "maxWidth": "100%"
+    }
+  },
+  "image#1": {
+    "props": {
+      "src": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/1614455592-POST.png",
+      "maxWidth": "100%"
+    }
+  },
+  "image#2": {
+    "props": {
+      "src": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/1614455592-POST.png",
+      "maxWidth": "100%"
+    }
+  },
+
 
   "tab-layout": {
     "children": [
