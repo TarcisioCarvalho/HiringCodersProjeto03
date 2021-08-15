@@ -40,10 +40,9 @@
   },
   "search-bar":{
     "props":{
-      "width": "grow",
-      "blockClass":"searchBar",
-      "maxWidth":"100%"
+      "blockClass":"searchBar"
     }
+    
   },
 
   "flex-layout.col#logo-desktop": {
