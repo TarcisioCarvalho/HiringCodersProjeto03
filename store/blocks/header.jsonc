@@ -38,6 +38,13 @@
       "width": "grow"
     }
   },
+  "search-bar":{
+    "props":{
+      "width": "grow",
+      "blockClass":"search-bar"
+    }
+  },
+
   "flex-layout.col#logo-desktop": {
     "props": {
       "verticalAlign": "middle"
@@ -48,8 +55,8 @@
     "props": {
       "title": "Logo",
       "href": "/",
-      "url": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg",
-      "width": "80"
+      "url": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/upmedal.png",
+      "width": "150"
     }
   },
   "header-layout.mobile": {

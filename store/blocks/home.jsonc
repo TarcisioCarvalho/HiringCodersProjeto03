@@ -1,15 +1,113 @@
 {
   "store.home": { 
     "blocks": [
+      "tab-layout",
+      "slider-layout#text-test",
       "rich-text"
+      
     ]
   },
-  "rich-text": { 
+
+  "tab-layout": {
+    "children": [
+      "tab-list",
+      "tab-content"
+    ]
+  },
+
+  "tab-list": {
+    "children": [
+      "tab-list.item#1",
+      "tab-list.item#2"
+      ]
+  },
+
+  "tab-content": {
+    "children": [
+      "tab-content.item#1",
+      "tab-content.item#2"
+      ]
+  },
+
+  "tab-list.item#1": {
+    "props": {
+      "tabId": "majorAppliances",
+      "label": "Major Appliances",
+      "textPosition": "left",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#2": {
+    "props": {
+      "tabId": "electronics",
+      "label": "Electronics"
+    }
+  },
+
+  "tab-content.item#1": {
+    "children": [
+      "rich-text#3"
+    ],
+    "props": {
+      "tabId": "majorAppliances"
+    }
+  },
+  "tab-content.item#2": {
+    "children": [
+      "rich-text#4"
+    ],
+    "props": {
+      "tabId": "electronics"
+    }
+  },
+  "rich-text#3": {
+    "props": {
+      "text": "Texto para Major Appliances",
+      "textPosition": "left",
+      "font": "t-heading-3"
+    }
+  },
+  "rich-text#4": {
+    "props": {
+      "text": "Texto para Electronics",
+      "textPosition": "left",
+      "font": "t-heading-3"
+    }
+  },
+
+
+  "slider-layout#text-test": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel"
+    },
+    "children": ["rich-text#1", "rich-text#2"]
+  },
+
+  "rich-text#1": {
     "props": { 
-      "text": "VTEX Store Framework",
+      "text": ".<p><img style=' width=`150;` height=`150;`' alt='Texto da propriedade alt' title='Propriedade title' src='https://maratonavirtual.s3.sa-east-1.amazonaws.com/6iibxhv7jzzdn2749uhoxub2fdjf?response-content-disposition=inline%3B%20filename%3D%22BANNER-WOOD.png%22%3B%20filename%2A%3DUTF-8%27%27BANNER-WOOD.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210815%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210815T000042Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=895b1e376d038fb377868c68ce6b5a822b348a4c67aa86cffcb2e53d8aa6514d '  width:50px/></p>",
       "textAlignment": "CENTER",
       "textPosition": "CENTER",
       "font": "t-heading-1"
+    }
+  },
+  "rich-text#2": {
+    "props": {
+      "text": " .<p><img style=' width=`150;` height=`150;`' alt='Texto da propriedade alt' title='Propriedade title' src='https://maratonavirtual.s3.sa-east-1.amazonaws.com/du3k6akoks0u3xe322aypnaaal8e?response-content-disposition=inline%3B%20filename%3D%22W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png%22%3B%20filename%2A%3DUTF-8%27%27W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210815%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210815T004116Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ad8735ca8fba31287d4f4ecdacbcb171e5636a11dd496233af0425d569120138 '  width:50px/></p>",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "font": "t-heading-1"
+    }
+  },
+  "rich-text": { 
+    "props": { 
     }
   }
 }
