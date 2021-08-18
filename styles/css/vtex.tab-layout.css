@@ -1,7 +1,16 @@
-.listContainer{
-    background-color: darkkhaki;
-}
 
-.listItem{
-    float: left;
-}
+.listContainer :global(.vtex-button) { 
+    justify-content: left;
+    border: none;
+    background-color:transparent;}
+
+    
+
+    .listItemActive {
+        border-bottom: 2px solid #59FF00;
+        color: #59FF00; 
+    }
+
+    .listContainer{
+        background: rgb(20, 20, 20);;
+    }
