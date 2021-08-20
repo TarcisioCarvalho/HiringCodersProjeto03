@@ -2,7 +2,12 @@
   "store.home": { 
     "blocks": [
       "tab-layout",
-      "slider-layout"
+      "slider-layout",
+      "search-result-layout.customQuery"
+      // "list-context.product-list#home"
+      //,
+      //"product-summary.shelf#demo1",
+      //"list-context.product-list#demo1"
 
 
       //"slider-layout#text-test",
@@ -101,7 +106,7 @@
 
   "rich-text#1": {
     "props": { 
-      "text": ".<p><img alt='Texto da propriedade alt' title='Propriedade title' src='https://maratonavirtual.s3.sa-east-1.amazonaws.com/6iibxhv7jzzdn2749uhoxub2fdjf?response-content-disposition=inline%3B%20filename%3D%22BANNER-WOOD.png%22%3B%20filename%2A%3DUTF-8%27%27BANNER-WOOD.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210818%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210818T141051Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=216c49befda976c7a9181dffbdcef71c3a41f8e3d1e807724b40731e90100e34'  width:50px/></p>",
+      "text": ".<p><img alt='Texto da propriedade alt' title='Propriedade title' src='https://maratonavirtual.s3.sa-east-1.amazonaws.com/6iibxhv7jzzdn2749uhoxub2fdjf?response-content-disposition=inline%3B%20filename%3D%22BANNER-WOOD.png%22%3B%20filename%2A%3DUTF-8%27%27BANNER-WOOD.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210820%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210820T131123Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=f5a669a334c26082ee792e426b680e65654c005ca95c7735844089afd97c6ff3'/></p>",
       "textAlignment": "CENTER",
       "textPosition": "CENTER",
       "font": "t-heading-1"
@@ -109,12 +114,60 @@
   },
   "rich-text#2": {
     "props": {
-      "text": " .<p><img  alt='Texto da propriedade alt' title='Propriedade title' src='https://maratonavirtual.s3.sa-east-1.amazonaws.com/du3k6akoks0u3xe322aypnaaal8e?response-content-disposition=inline%3B%20filename%3D%22W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png%22%3B%20filename%2A%3DUTF-8%27%27W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210818%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210818T141245Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=3b789cc81ffe91410c483709e9d36142160796f549eb8a22ffaacfdc68c1c088 '  width:50px/></p>",
+      "text": " .<p><img  alt='Texto da propriedade alt' title='Propriedade title' src='https://maratonavirtual.s3.sa-east-1.amazonaws.com/du3k6akoks0u3xe322aypnaaal8e?response-content-disposition=inline%3B%20filename%3D%22W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png%22%3B%20filename%2A%3DUTF-8%27%27W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210820%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210820T131202Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=a1429c1cbd64d01bd32f9f2bb56d603faf749ba5d4d98c6de0a870d7a34d4ea1 ' /></p>",
       "textAlignment": "CENTER",
       "textPosition": "CENTER",
       "font": "t-heading-1"
     }
-  }
+  },//,
+
+  //fim tab-layout
+
+  "search-result-layout.customQuery": {
+    "props": {
+        "querySchema": {
+            "orderByField": "OrderByReleaseDateDESC",
+            "hideUnavailableItems": true,
+            "maxItemsPerPage": 8,
+           // "queryField": "kitupmedal",
+            "mapField": "ft",
+            "skusFilter": "ALL_AVAILABLE"
+        }
+    },
+     "blocks": [
+       "search-result-layout.desktop"
+     ]
+}
+
+
+
+  /*"list-context.product-list#home": {
+    "blocks": ["product-summary.shelf#home"],
+    "children": ["slider-layout#home"],
+    "props": {
+        "category": "20",
+        "hideUnavailableItems": true,
+        "blockClass": "products"
+    }
+},
+
+
+  "product-summary.shelf#home": {
+    "children": [
+      //"stack-layout#prodsum",
+      "product-summary-name",
+      "product-rating-inline",
+      "product-summary-space",
+      "product-summary-price",
+      "product-summary-buy-button"
+    ]
+  },
+
+  "slider-layout#home":{
+
+  }*/
+ 
+  
   
 
   
