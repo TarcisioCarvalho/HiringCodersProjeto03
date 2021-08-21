@@ -3,7 +3,8 @@
     "blocks": [
       "tab-layout",
       "slider-layout",
-      "search-result-layout.customQuery"
+      "search-result-layout.customQuery",
+      "tab-content#home"
       // "list-context.product-list#home"
       //,
       //"product-summary.shelf#demo1",
@@ -137,8 +138,40 @@
      "blocks": [
        "search-result-layout.desktop"
      ]
-}
+},
 
+
+"tab-content#home":{ //Container Geral dos conteudos
+    "children":[
+      "tab-content.item#promocao",
+      "tab-content.item#corinthians",
+      "tab-content.item#palmeiras",
+      "tab-content.item#signos",
+      "tab-content.item#guerreiros"
+    ]
+  },
+  "tab-content.item#promocao":{
+    "children":[
+      "list-context.product-list#promocao"
+    ],
+    "props":{
+      "tabId": "promocao"
+    }
+  },
+  "list-context.product-list#promocao":{
+    "blocks": ["product-summary.shelf#tab-product"],
+    "children": ["slider-layout#tab-product"],
+    "props":{
+      "category": "20/24"
+    }
+  },
+"list-context.product-list#promocao":{
+    "blocks": ["product-summary.shelf#tab-product"],
+    "children": ["slider-layout#tab-product"],
+    "props":{
+      "category": "20/22"
+    }
+  }
 
 
   /*"list-context.product-list#home": {
