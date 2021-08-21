@@ -3,8 +3,9 @@
     "blocks": [
       "tab-layout",
       "slider-layout",
-      "search-result-layout.customQuery",
-      "tab-content#home"
+      "search-result-layout.customQuery"
+      //"search-result-layout.customQuery",
+      //"tab-content#home"
       // "list-context.product-list#home"
       //,
       //"product-summary.shelf#demo1",
@@ -122,9 +123,74 @@
     }
   },//,
 
+  "search-result-layout.customQuery": {
+    "props": {
+      "querySchema": {
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "skip"
+      }
+    },
+    "blocks":["search-result-layout.desktop","search-result-layout.mobile"]
+  },
+
+  "search-result-layout.desktop":{
+    "children": [
+      //"flex-layout.row#searchbread",
+      //"flex-layout.row#searchtitle",
+      "flex-layout.row#result"
+    ],
+    "props": {
+      "preventRouteChange": true
+    }
+  },
+  "search-result-layout.mobile":{
+
+  },
+
+  "flex-layout.row#result":{
+    "children":["search-content"]
+  },
+
+  "search-content":{
+    "blocks":["gallery","not-found"]
+  },
+
+  "product-summary.shelf": {
+    "children": [
+      "product-summary-name",
+      "product-summary-image"
+     
+    ]
+  },
+
+  "gallery": {
+    "props": {
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "(min-width:1300px)": 4,
+            "desktop": 3,
+            "tablet": 3,
+            "phone": 2
+          }
+        },
+        {
+          "name": "list",
+          "component": "ListSummary",
+          "itemsPerRow": 1
+        }
+      ],
+      "ListSummary": "product-summary.shelf",
+      "GridSummary": "product-summary.shelf"
+    }
+  }
+  
+
   //fim tab-layout
 
-  "search-result-layout.customQuery": {
+  /*"search-result-layout.customQuery": {
     "props": {
         "querySchema": {
             "orderByField": "OrderByReleaseDateDESC",
@@ -171,7 +237,7 @@
     "props":{
       "category": "20/22"
     }
-  }
+  }*/
 
 
   /*"list-context.product-list#home": {
