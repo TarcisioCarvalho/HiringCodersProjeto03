@@ -116,7 +116,7 @@
   },
   "rich-text#2": {
     "props": {
-      "text": " .<p><img  alt='Texto da propriedade alt' title='Propriedade title' src='https://maratonavirtual.s3.sa-east-1.amazonaws.com/du3k6akoks0u3xe322aypnaaal8e?response-content-disposition=inline%3B%20filename%3D%22W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png%22%3B%20filename%2A%3DUTF-8%27%27W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210820%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210820T131202Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=a1429c1cbd64d01bd32f9f2bb56d603faf749ba5d4d98c6de0a870d7a34d4ea1 ' /></p>",
+      "text": " .<p><img  alt='Texto da propriedade alt' title='Propriedade title' src='assets/img-banner-guerreiros.png' /></p>",
       "textAlignment": "CENTER",
       "textPosition": "CENTER",
       "font": "t-heading-1"
