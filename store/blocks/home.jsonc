@@ -108,7 +108,7 @@
 
   "rich-text#1": {
     "props": { 
-      "text": ".<p><img alt='Texto da propriedade alt' title='Propriedade title' src='https://maratonavirtual.s3.sa-east-1.amazonaws.com/6iibxhv7jzzdn2749uhoxub2fdjf?response-content-disposition=inline%3B%20filename%3D%22BANNER-WOOD.png%22%3B%20filename%2A%3DUTF-8%27%27BANNER-WOOD.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210820%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210820T131123Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=f5a669a334c26082ee792e426b680e65654c005ca95c7735844089afd97c6ff3'/></p>",
+      "text": ".<p><img alt='Texto da propriedade alt' title='Propriedade title' src='https://maratonavirtual.s3.sa-east-1.amazonaws.com/6iibxhv7jzzdn2749uhoxub2fdjf?response-content-disposition=inline%3B%20filename%3D%22BANNER-WOOD.png%22%3B%20filename%2A%3DUTF-8%27%27BANNER-WOOD.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210821%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210821T195539Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=fb8ca012f5d04497bab9f4a693e3da36e7615ae94ab14056fe1b53ce3986976e'/></p>",
       "textAlignment": "CENTER",
       "textPosition": "CENTER",
       "font": "t-heading-1"
@@ -157,8 +157,12 @@
 
   "product-summary.shelf": {
     "children": [
+      "modal-trigger",
       "product-summary-name",
-      "product-summary-image"
+      "product-summary-image",
+      "vtex.product-highlights@2.x:product-highlights",
+      "product-summary-price",
+      "add-to-cart-button"
      
     ]
   },
@@ -171,9 +175,9 @@
           "component": "GridSummary",
           "itemsPerRow": {
             "(min-width:1300px)": 4,
-            "desktop": 3,
-            "tablet": 3,
-            "phone": 2
+            "desktop": 2,
+            "tablet": 2,
+            "phone": 1
           }
         },
         {
@@ -184,6 +188,53 @@
       ],
       "ListSummary": "product-summary.shelf",
       "GridSummary": "product-summary.shelf"
+    }
+  },
+
+  "vtex.product-highlights@2.x:product-highlights": {
+    "children": ["product-highlight-text"]
+  },
+  "product-highlight-text": {
+    "props": {
+      "message": "oi"
+    }
+  },
+
+  "add-to-cart-button":{
+    "props": {
+
+      "onClickBehavior":"to-product-page",
+      "text":"VER DETALHES"
+    }
+  },
+
+  "modal-trigger":{
+    "children": [
+      "rich-text",
+      "modal-layout"
+    ]
+  },
+
+  "rich-text": {
+    "props": {
+      "text": "Click me"
+    }
+  },
+
+  "modal-layout":{
+    "children":[
+      "video"
+    ]
+  },
+  "video#background": {
+    "props": {
+      "width": "100%",
+      "height": "600px",
+      "loop": false,
+      "autoPlay": true,
+      "muted": false,
+      "src": "https://youtu.be/vVNF4OASRDI",
+      "blockClass": "videoEl"
     }
   }
   
