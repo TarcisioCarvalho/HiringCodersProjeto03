@@ -29,6 +29,7 @@ background:rgb(20, 20, 20); ;
     border-radius: 50px;
     background: black;
     margin: 0;
+    width: 75%;
   }
 
   /*.imageElement {

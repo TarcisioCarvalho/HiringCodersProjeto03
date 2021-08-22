@@ -22,7 +22,8 @@
 
   "flex-layout.row":{
     "props":{
-      "horizontalAlign": "center"
+      "horizontalAlign": "center",
+      "width":"80%"
     },
     "children": [
       "flex-layout.col"
@@ -31,7 +32,7 @@
 
   "flex-layout.col":{
     "props":{
-      "width":"85%"
+      "width":"80%"
     },
     "children":[
       "tab-layout"
@@ -46,14 +47,21 @@
      // "list-context.image-list",
       "slider-layout",
       "tab-content"
-    ]
+    ],
+    "props":{
+      "blockClass":"tablelayout"
+    }
   },
   
   "tab-list": {
     "children": [
       "tab-list.item#1",
       "tab-list.item#2"
-      ]
+      ],
+    "props":{
+      "blockClass":"tablelist",
+      "width":"100%"
+    }
   },
 
   "tab-content": {

@@ -135,8 +135,6 @@
   "add-to-cart-button":{
     "props": {
 
-      "onClickBehavior":"to-product-page",
-      "text":"VER DETALHES"
     }
   },
 
@@ -146,4 +144,5 @@
     ]
   }
   
+
 }

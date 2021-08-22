@@ -19,16 +19,19 @@
       "flex-layout.col#wats"
     ],
     "props":{
-      "horizontalAlign":"center"
+      "horizontalAlign":"center",
+      "width":"100%"
     }
   },
 
   "flex-layout.col#entrar":{
     "children":[
-      "link#foo"
+      "rich-text#1",
+      "image#1"
     ],
     "props":{
-      "width": "33%"
+      "horizontalAlign": "center",
+      "width":"34%"
     }
   },
 
@@ -39,12 +42,32 @@
     }
   },
 
+  "rich-text#1":{
+    "props":{
+      "text":"Cadastrar"
+    }
+  },
+
+  "image#1": {
+    "props": {
+      "width": 50,
+      "src": "assets/userg.png",
+      "link": {
+        
+          "url":"https://api.whatsapp.com/send?l=pt-BR&phone=5511964335064&text=Para%20falar%20com%20a%20Gabi%F0%9F%91%B1%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F%0A%0AClique%20enviar%F0%9F%91%89%0A%0A------------%0A*D%C3%BAvida%20sobre%3A*%20Trof%C3%A9u%20Bras%C3%A3o%20Grandes%20Guerreiros%0A*ID%3A*%2052292"
+      
+      }
+    }
+  },
+
   "flex-layout.col#api":{
     "children":[
-      "link#foo2"
+      "rich-text#2",
+      "image#2"
     ],
     "props":{
-      "width": "33%"
+      "horizontalAlign": "center",
+      "width":"33%"
     }
   },
 
@@ -54,27 +77,199 @@
       "label": "Home"
     }
   },
+  "image#2":{
+    "props": {
+      "width": 50,
+      "src": "assets/homeg.png",
+      "link": "https://api.whatsapp.com/send?l=pt-BR&phone=5511964335064&text=Para%20falar%20com%20a%20Gabi%F0%9F%91%B1%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F%0A%0AClique%20enviar%F0%9F%91%89%0A%0A------------%0A*D%C3%BAvida%20sobre%3A*%20Trof%C3%A9u%20Bras%C3%A3o%20Grandes%20Guerreiros%0A*ID%3A*%2052292"
+  }
+},
+"rich-text#2":{
+  "props":{
+    "text":"Home"
+  }
+},
 
   "flex-layout.col#wats":{
     "children":[
-      "link#foo3"
+      "rich-text#3",
+      "image#3"
     ],
     "props":{
-      "width": "33%"
+      "horizontalAlign": "center",
+      "width":"33%"
     }
   },
 
-  "link#foo3": {
-    "props": {
-      "href": "https://api.whatsapp.com/send?l=pt-BR&phone=5511964335064&text=Para%20falar%20com%20a%20Gabi%F0%9F%91%B1%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F%0A%0AClique%20enviar%F0%9F%91%89%0A%0A------------%0A*D%C3%BAvida%20sobre%3A*%20Trof%C3%A9u%20Bras%C3%A3o%20Grandes%20Guerreiros%0A*ID%3A*%2052292",
-      "label": "Wats"
+
+"image#3": {
+  "props": {
+    "width": 50,
+    "src": "assets/wats.jpg",
+    "link": {
+      "url":"https://api.whatsapp.com/send?l=pt-BR&phone=5511964335064&text=Para%20falar%20com%20a%20Gabi%F0%9F%91%B1%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F%0A%0AClique%20enviar%F0%9F%91%89%0A%0A------------%0A*D%C3%BAvida%20sobre%3A*%20Trof%C3%A9u%20Bras%C3%A3o%20Grandes%20Guerreiros%0A*ID%3A*%2052292"
     }
   }
-  
+},
+
+"rich-text#3":{
+  "props":{
+    "text":"Suporte"
+  }
+}
+}
+
+
   /*"rich-text#footer":{
     "props":{
       "text":"[![Alt ou título da imagem](assets/user.png)](www.globo.com)",
       "text2":"[![Alt ou título da imagem](assets/user.png)](www.globo.com)"
     }
   }*/
-}
+
+ /* {
+    "footer": {
+      "blocks": [
+        "footer-layout.desktop", 
+        "footer-layout.mobile"]
+    },
+    "footer-layout.desktop": { 
+      "children": [
+        "flex-layout.row#rodape"
+      ]
+    },
+    "footer-layout.mobile": { 
+      "children": [
+        "flex-layout.row#footermobile"
+      ]
+    },
+    "flex-layout.row#rodape":{
+      "props":{
+        "blockClass":"rodape",
+        "fullWidth": true,
+        "paddingTop": 3
+      },
+      "children": [
+        "image"
+      ]
+    },
+    "image": {
+      "props": {
+        "width": 100,
+        "src": "assets/img-logo-upmedal.png"
+      }
+    },
+    "flex-layout.row#footermobile": { 
+      "props": {
+        "blockClass": "footer-mobile",
+        "fullWidth": true,
+        "horizontalAlign": "center",
+        "verticalAlign": "top",
+        "preserveLayoutOnMobile": true,
+        "preventHorizontalStretch": true,
+        "preventVerticalStretch": false,
+        "colSizing": "equal"
+      },
+      "children": [
+        "flex-layout.col#entrar",
+        "flex-layout.col#desafios",
+        "flex-layout.col#loja",
+        "flex-layout.col#suporte"
+      ]
+    },
+    "flex-layout.col#entrar":{
+      "props":{
+        "horizontalAlign": "center"
+      },
+      "children":[
+          "image#login",
+          "rich-text#login"
+      ]
+    },
+    "image#login": {
+      "props": {
+        "width": 30,
+        "src": "assets/user.png",
+        "link": "/"
+      }
+    },
+    "rich-text#login": {
+      "props": {
+        "text": "ENTRAR",
+        "textPosition": "CENTER",
+        "font": "mini"
+      }
+    },
+    "flex-layout.col#desafios":{
+      "props":{
+        "horizontalAlign": "center"
+      },
+      "children":[
+          "image#desafios",
+          "rich-text#desafios"
+      ]
+    },
+    "image#desafios": {
+      "props": {
+        "width": 30,
+        "src": "assets/trophy.png",
+        "link": "/"
+      }
+    },
+    "rich-text#desafios": {
+      "props": {
+        "text": "DESAFIOS",
+        "textPosition": "CENTER",
+        "font": "mini"
+      }
+    },
+    "flex-layout.col#loja":{
+      "props":{
+        "horizontalAlign": "center"
+      },
+      "children":[
+          "image#loja",
+          "rich-text#loja"
+      ]
+    },
+    "image#loja": {
+      "props": {
+        "width": 30,
+        "src": "assets/carrinho.png",
+        "link": "/"
+      }
+    },
+    "rich-text#loja": {
+      "props": {
+        "text": "LOJA",
+        "textPosition": "CENTER",
+        "font": "mini"
+      }
+    },
+    "flex-layout.col#suporte":{
+      "props":{
+        "horizontalAlign": "center"
+      },
+      "children":[
+          "image#suporte",
+          "rich-text#suporte"
+      ]
+    },
+    "image#suporte": {
+      "props": {
+        "width": 30,
+        "src": "assets/whatsapp.png",
+        "link": {
+          "url": "https://api.whatsapp.com/send?phone=5561998332803&text=Desafio%20HC"
+        }
+      }
+    },
+    "rich-text#suporte": {
+      "props": {
+        "text": "SUPORTE",
+        "textPosition": "CENTER",
+        "font": "mini"
+      }
+    }
+  }*/
+  

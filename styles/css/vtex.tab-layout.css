@@ -9,5 +9,9 @@
         color: #59FF00; 
     }
 .listContainer{
-        background: rgb(20, 20, 20);;
+        background: black;
+    }
+
+    .listContainer--tablelist{
+        background-color: black;
     }
