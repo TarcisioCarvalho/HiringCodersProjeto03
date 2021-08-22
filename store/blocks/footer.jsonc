@@ -14,12 +14,67 @@
   },
   "flex-layout.row#footer": { 
     "children": [
-      "rich-text#footer"
-    ]
-  },
-  "rich-text#footer":{
+      "flex-layout.col#entrar",
+      "flex-layout.col#api",
+      "flex-layout.col#wats"
+    ],
     "props":{
-      "text":"Footer"
+      "horizontalAlign":"center"
+    }
+  },
+
+  "flex-layout.col#entrar":{
+    "children":[
+      "link#foo"
+    ],
+    "props":{
+      "width": "33%"
+    }
+  },
+
+  "link#foo": {
+    "props": {
+      "href": "/login?returnUrl={queryString.returnUrl}",
+      "label": "Cadastrar"
+    }
+  },
+
+  "flex-layout.col#api":{
+    "children":[
+      "link#foo2"
+    ],
+    "props":{
+      "width": "33%"
+    }
+  },
+
+  "link#foo2": {
+    "props": {
+      "href": "/login?returnUrl={queryString.returnUrl}",
+      "label": "Home"
+    }
+  },
+
+  "flex-layout.col#wats":{
+    "children":[
+      "link#foo3"
+    ],
+    "props":{
+      "width": "33%"
+    }
+  },
+
+  "link#foo3": {
+    "props": {
+      "href": "https://api.whatsapp.com/send?l=pt-BR&phone=5511964335064&text=Para%20falar%20com%20a%20Gabi%F0%9F%91%B1%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F%0A%0AClique%20enviar%F0%9F%91%89%0A%0A------------%0A*D%C3%BAvida%20sobre%3A*%20Trof%C3%A9u%20Bras%C3%A3o%20Grandes%20Guerreiros%0A*ID%3A*%2052292",
+      "label": "Wats"
     }
   }
+  
+  /*"rich-text#footer":{
+    "props":{
+      "text":"[![Alt ou título da imagem](assets/user.png)](www.globo.com)",
+      "text2":"[![Alt ou título da imagem](assets/user.png)](www.globo.com)"
+    }
+  }*/
 }
