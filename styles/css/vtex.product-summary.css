@@ -1,3 +1,17 @@
 .container{
     background:rgb(100,100,100);
 }
+
+.buyButton{
+    background-color:#424242;
+    color: black;
+}
+
+.buyButtonContainer{
+    background-color:#424242;
+    color: black;
+}
+
+.buttonDataContainer{
+    background: black;
+}

@@ -24,6 +24,7 @@
         "maxItemsPerPage": 8,
         "queryField": "palmeiras",
         "mapField": "ft"
+        
       },
       "preventRouteChange": true
     },
@@ -51,5 +52,98 @@
     "children":[
       "search-content"
     ]
+  },
+
+  /*"search-result-layout.customQuery#corinthians": {
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByTopSaleDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 8,
+        "queryField": "corinthias",
+        "mapField": "ft"
+      }
+    },
+    "blocks":["search-result-layout.desktop","search-result-layout.mobile"]
+  },
+
+  "search-result-layout.desktop":{
+    "children": [
+      "flex-layout.row#result"
+    ],
+    "props": {
+      "preventRouteChange": true
+    }
+  },
+  "search-result-layout.mobile":{
+
+  },
+*/
+  "flex-layout.row#result":{
+    "children":["search-content"]
+  },
+
+  "search-content":{
+    "blocks":["gallery","not-found"]
+  },
+
+  "product-summary.shelf": {
+    "children": [
+      "modal-trigger",
+      "product-summary-name",
+      "product-summary-image",
+      "vtex.product-highlights@2.x:product-highlights",
+      "product-summary-price",
+      "add-to-cart-button"
+     
+    ]
+  },
+
+  "gallery": {
+    "props": {
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "(min-width:1300px)": 4,
+            "desktop": 2,
+            "tablet": 2,
+            "phone": 1
+          }
+        },
+        {
+          "name": "list",
+          "component": "ListSummary",
+          "itemsPerRow": 1
+        }
+      ],
+      "ListSummary": "product-summary.shelf",
+      "GridSummary": "product-summary.shelf"
+    }
+  },
+
+  "vtex.product-highlights@2.x:product-highlights": {
+    "children": ["product-highlight-text"]
+  },
+  "product-highlight-text": {
+    "props": {
+      "message": "oi"
+    }
+  },
+
+  "add-to-cart-button":{
+    "props": {
+
+      "onClickBehavior":"to-product-page",
+      "text":"VER DETALHES"
+    }
+  },
+
+  "modal-trigger":{
+    "children": [
+      "modal-layout"
+    ]
   }
+  
 }

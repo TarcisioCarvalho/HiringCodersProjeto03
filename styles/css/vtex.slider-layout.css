@@ -1,6 +1,6 @@
 .imageElement {
     border-radius: 1rem;
-    
+
 }
 
 .caretIcon{
@@ -15,10 +15,11 @@
     bottom: 0;
 }
 
-.sliderLayoutContainer--slider-layout-demo{
+.sliderLayoutContainer{
     padding-bottom: 35px;
+    background: rgb(20, 20, 20);
 }
 
-.paginationDotsContainer--slider-layout-demo{
+.paginationDotsContainer{
     padding-bottom: 10px;
 }

@@ -79,7 +79,6 @@
 
   "tab-content.item#1": {
     "children": [
-     // "slider-layout",
       "search-result-layout.customQuery#corinthians"
     ],
     "props": {
@@ -88,7 +87,6 @@
   },
   "tab-content.item#2": {
     "children": [
-  //  "slider-layout",
       "search-result-layout.customQuery#palmeiras"
     ],
     "props": {
@@ -134,18 +132,16 @@
   "image#banner1": {
     "props": {
         "src": "assets/img-banner-promo-upmedal.png",
-        "alt": "Banner wood sport",
-        "width": "100%",
-        "blockClass": "banner"
+        "alt": "------------",
+        "width": "100%"
     }
 },
 
 "image#banner2": {
   "props": {
-      "src": "assets/img-banner-promo-upmedal.png",
-      "alt": "Banner wood sport",
-      "width": "100%",
-      "blockClass": "banner"
+      "src": "assets/img-banner-guerreiros.png",
+      "alt": "------------",
+      "width": "100%"
   }
 }
   //,*/
