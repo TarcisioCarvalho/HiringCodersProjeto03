@@ -1,0 +1,24 @@
+.imageElement {
+    border-radius: 1rem;
+    
+}
+
+.caretIcon{
+    color: white;
+}
+
+.slideTrackContainer {
+    align-items: flex-end;
+}
+
+.sliderArrows {
+    bottom: 0;
+}
+
+.sliderLayoutContainer--slider-layout-demo{
+    padding-bottom: 35px;
+}
+
+.paginationDotsContainer--slider-layout-demo{
+    padding-bottom: 10px;
+}

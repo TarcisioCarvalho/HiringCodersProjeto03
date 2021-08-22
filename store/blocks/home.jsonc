@@ -1,9 +1,10 @@
 {
   "store.home": { 
     "blocks": [
-      "tab-layout",
-      "slider-layout",
-      "search-result-layout.customQuery"
+      "flex-layout.row"
+     // "tab-layout",
+     // "slider-layout"
+     // "search-result-layout.customQuery"
       //"search-result-layout.customQuery",
       //"tab-content#home"
       // "list-context.product-list#home"
@@ -19,15 +20,33 @@
     ]
   },
 
+  "flex-layout.row":{
+    "props":{
+      "horizontalAlign": "center"
+    },
+    "children": [
+      "flex-layout.col"
+    ]
+  },
+
+  "flex-layout.col":{
+    "props":{
+      "width":"85%"
+    },
+    "children":[
+      "tab-layout"
+    ]
+  },
+
+
 // Inicio tab-layout
   "tab-layout": {
     "children": [
       "tab-list",
+     // "list-context.image-list",
+      "slider-layout",
       "tab-content"
-    ],
-    "props": {
-      "justify": "left"
-    }
+    ]
   },
   
   "tab-list": {
@@ -46,48 +65,54 @@
 
   "tab-list.item#1": {
     "props": {
-      "tabId": "majorAppliances",
-      "label": "Major Appliances"
-      //"defaultActiveTab": true
+      "tabId": "Corinthians",
+      "label": "Corinthians",
+      "defaultActiveTab": true
     }
   },
   "tab-list.item#2": {
     "props": {
-      "tabId": "electronics",
-      "label": "Electronics"
+      "tabId": "Palmeiras",
+      "label": "Palmeiras"
     }
   },
 
   "tab-content.item#1": {
     "children": [
-      "rich-text#3"
+     // "slider-layout",
+      "search-result-layout.customQuery#corinthians"
     ],
     "props": {
-      "tabId": "majorAppliances"
+      "tabId": "Corinthians"
     }
   },
   "tab-content.item#2": {
     "children": [
-      "rich-text#4"
+  //  "slider-layout",
+      "search-result-layout.customQuery#palmeiras"
     ],
     "props": {
-      "tabId": "electronics"
+      "tabId": "Palmeiras"
     }
   },
-  "rich-text#3": {
+
+ /* "list-context.image-list": {
+    "children": ["slider-layout"],
     "props": {
-      "text": "",
-      "textPosition": "left",
-      "font": "t-heading-3"
+      "height": 900,
+      "images": [
+        {
+          "image": "assets/img-banner-promo-upmedal.png",
+          "description": "----------------"
+        },
+        {
+          "image": "assets/img-banner-guerreiros.png",
+          "description": "--------------"
+        }
+      ]
     }
-  },
-  "rich-text#4": {
-    "props": {
-      "text": "",
-      "textPosition": "left",
-      "font": "t-heading-3"
-    }
-  },
+  },*/
+  
 
   // Fim tab-layout
   //Inicio slider-layout
@@ -103,27 +128,29 @@
       "showNavigationArrows": "desktopOnly",
       "blockClass": "carousel"
     },
-    "children": ["rich-text#1", "rich-text#2"]
+    "children": ["image#banner1", "image#banner2"]
   },
 
-  "rich-text#1": {
-    "props": { 
-      "text": ".<p><img alt='Texto da propriedade alt' title='Propriedade title' src='https://maratonavirtual.s3.sa-east-1.amazonaws.com/6iibxhv7jzzdn2749uhoxub2fdjf?response-content-disposition=inline%3B%20filename%3D%22BANNER-WOOD.png%22%3B%20filename%2A%3DUTF-8%27%27BANNER-WOOD.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210821%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210821T195539Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=fb8ca012f5d04497bab9f4a693e3da36e7615ae94ab14056fe1b53ce3986976e'/></p>",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
-    }
-  },
-  "rich-text#2": {
+  "image#banner1": {
     "props": {
-      "text": " .<p><img  alt='Texto da propriedade alt' title='Propriedade title' src='assets/img-banner-guerreiros.png' /></p>",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
+        "src": "assets/img-banner-promo-upmedal.png",
+        "alt": "Banner wood sport",
+        "width": "100%",
+        "blockClass": "banner"
     }
-  },//,
+},
 
-  "search-result-layout.customQuery": {
+"image#banner2": {
+  "props": {
+      "src": "assets/img-banner-promo-upmedal.png",
+      "alt": "Banner wood sport",
+      "width": "100%",
+      "blockClass": "banner"
+  }
+}
+  //,*/
+
+  /*"search-result-layout.customQuery": {
     "props": {
       "querySchema": {
         "skusFilter": "FIRST_AVAILABLE",
@@ -140,7 +167,8 @@
       "flex-layout.row#result"
     ],
     "props": {
-      "preventRouteChange": true
+      "preventRouteChange": true,
+      "queryField": "corinthias"
     }
   },
   "search-result-layout.mobile":{
@@ -219,9 +247,9 @@
     "props": {
       "text": "Click me"
     }
-  },
+  }
 
-  "modal-layout":{
+ /* "modal-layout":{
     "children":[
       "video"
     ]
@@ -236,7 +264,25 @@
       "src": "https://youtu.be/vVNF4OASRDI",
       "blockClass": "videoEl"
     }
-  }
+  },*/
+
+  /*"search-result-layout.customQuery#corinthians": {
+    "props": {
+      "querySchema": {
+        "orderByField": "OrderByTopSaleDESC",
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 8,
+        "queryField": "corinthias",
+        "mapField": "ft"
+      },
+      "preventRouteChange": true
+    },
+    "blocks": [
+      "search-result-layout.desktop#home",
+      "search-result-layout.mobile#home",
+      "search-not-found-layout"
+    ]
+  }*/
   
 
   //fim tab-layout
