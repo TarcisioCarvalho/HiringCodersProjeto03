@@ -10,7 +10,7 @@
 ### Página de Produtos
 ![alt text](https://github.com/TarcisioCarvalho/HiringCodersProjeto03/blob/main/assets/3.jpg?raw=true)
 
-### footer
+### footer com links
 ![alt text](https://github.com/TarcisioCarvalho/HiringCodersProjeto03/blob/main/assets/4.jpg?raw=true)
 
 
